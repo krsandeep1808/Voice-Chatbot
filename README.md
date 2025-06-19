@@ -5,7 +5,6 @@ Here's a comprehensive **README.md** file for your Voice Bot project:
 
 A voice-enabled chatbot that responds to questions using the OpenAI API and browser's Speech Recognition API.
 
-![Demo Screenshot](./demo-screenshot.png) *(Add screenshot later)*
 
 ## ✨ Features
 
