@@ -1,4 +1,4 @@
-# Voice Chat Bot - MERN Stack
+# Voice Chat Bot
 
 A real-time voice chat bot application built with the MERN stack (MongoDB, Express.js, React, Node.js) featuring speech recognition, text-to-speech, and real-time messaging.
 
@@ -42,7 +42,15 @@ cd backend
 
 # Install dependencies
 npm install
+````
+#### create .env file in backend directory and fill the open api key and mongodb conection string
+```
+PORT=5000
+MONGODB_URI=mongodb://localhost:27017/voice-chatbot
+OPENAI_API_KEY= enter you api key
+```
 
+```bash
 # Start the backend server
 npm run dev
 ```
@@ -205,18 +213,3 @@ Modify `frontend/src/App.css` to customize the appearance:
 
 This project is open source and available under the MIT License.
 
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## Support
-
-If you encounter any issues or have questions, please check:
-1. Browser console for errors
-2. Backend server logs
-3. MongoDB connection status
-4. Microphone permissions
