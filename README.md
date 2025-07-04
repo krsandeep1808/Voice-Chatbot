@@ -209,6 +209,25 @@ Modify `frontend/src/App.css` to customize the appearance:
 - Test real-time messaging with multiple browser tabs
 - Verify message persistence in MongoDB
 
+## Here are some demo screenshots
+#### Chat with bot
+<img width="100%" height="auto"  src="chatbot-screenshot/chatbot1.jpg" />
+<img width="100%" height="auto"  src="chatbot-screenshot/chatbot2.jpg" />
+<img width="100%" height="auto"  src="chatbot-screenshot/chatbot3.jpg" />
+<img width="100%" height="auto"  src="chatbot-screenshot/chatbot4.jpg" />
+
+#### Terminal of backend
+<img width="100%" height="auto"  src="chatbot-screenshot/terminal-backend.jpg" />
+
+#### Terminal of frontend
+<img width="100%" height="auto"  src="chatbot-screenshot/terminal-frontend.jpg" />
+
+#### Databse on MongoDB
+<img width="100%" height="auto"  src="chatbot-screenshot/databse1.jpg" />
+<img width="100%" height="auto"  src="chatbot-screenshot/databse2.jpg" />
+
+
+
 ## License
 
 This project is open source and available under the MIT License.
