@@ -3,7 +3,9 @@ import io from 'socket.io-client';
 import axios from 'axios';
 import './App.css';
 
-const socket = io('http://localhost:5000');
+const API_URL = process.env.REACT_APP_API_URL;
+
+const socket = io(API_URL);
 
 function App() {
     const [messages, setMessages] = useState([]);
@@ -34,7 +36,7 @@ function App() {
             console.log('📤 Sending voice message to server...');
             
             // Save message to database
-            await axios.post('http://localhost:5000/api/chat/messages', messageData);
+            await axios.post(`${API_URL}/api/chat/messages`, messageData);
             
             // Emit to socket
             socket.emit('voice-message', messageData);
@@ -44,7 +46,7 @@ function App() {
             
             console.log('🤖 Getting bot response...');
             // Get bot response
-            const botResponse = await axios.post('http://localhost:5000/api/chat/bot-response', {
+            const botResponse = await axios.post(`${API_URL}/api/chat/bot-response`, {
                 message: message.trim(),
                 room
             });
@@ -173,7 +175,7 @@ function App() {
 
     const loadMessages = async () => {
         try {
-            const response = await axios.get(`http://localhost:5000/api/chat/messages/${room}`);
+            const response = await axios.get(`${API_URL}/api/chat/messages/${room}`);
             setMessages(response.data);
         } catch (error) {
             console.error('Error loading messages:', error);
@@ -193,7 +195,7 @@ function App() {
 
         try {
             // Save message to database
-            await axios.post('http://localhost:5000/api/chat/messages', messageData);
+            await axios.post(`${API_URL}/api/chat/messages`, messageData);
             
             // Emit to socket
             socket.emit('text-message', messageData);
@@ -202,7 +204,7 @@ function App() {
             setMessages(prev => [...prev, messageData]);
             
             // Get bot response
-            const botResponse = await axios.post('http://localhost:5000/api/chat/bot-response', {
+            const botResponse = await axios.post(`${API_URL}/api/chat/bot-response`, {
                 message: message.trim(),
                 room
             });
